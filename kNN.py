@@ -76,7 +76,7 @@ plt.legend(loc='upper left')
 plt.show()
 
 
-for j in range(1,10):
+for j in range(1,25):
     test = KNeighborsClassifier(n_neighbors=j, p=2, metric='minkowski')
     test.fit(X_train_std, y_train)
     print("When k=",j,", the portion of successful classification in the test set is:", "{0:.0f}%".format(100*result_evaluation(test.predict(X_test_std),y_test)))
